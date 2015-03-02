@@ -59,6 +59,7 @@ const NSInteger widthOfBoardInBlocks = 10;
     
     [self.view addSubview:self.tetriminoView];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {

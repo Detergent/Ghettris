@@ -34,6 +34,7 @@
     
     [path stroke];
     [path fill];
+    
 }
 
 @end
