@@ -1,5 +1,5 @@
 //
-//  Block.m
+//  LBlock.h
 //  Ghettris
 //
 //  Created by Justin Guarino on 3/1/15.
@@ -7,4 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
+@interface LBlock : UIView
+
+@end

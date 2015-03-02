@@ -14,7 +14,13 @@
 		D03432DB1AA4077000FAA63B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03432DA1AA4077000FAA63B /* Images.xcassets */; };
 		D03432DE1AA4077000FAA63B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03432DC1AA4077000FAA63B /* LaunchScreen.xib */; };
 		D03432EA1AA4077000FAA63B /* GhettrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D03432E91AA4077000FAA63B /* GhettrisTests.m */; };
-		D03432F61AA408A800FAA63B /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D03432F51AA408A800FAA63B /* Block.m */; };
+		D03432FF1AA412E200FAA63B /* IBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03432FE1AA412E200FAA63B /* IBlock.m */; };
+		D03433011AA412EB00FAA63B /* JBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03433001AA412EB00FAA63B /* JBlock.m */; };
+		D03433031AA412F400FAA63B /* LBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03433021AA412F400FAA63B /* LBlock.m */; };
+		D03433051AA4130800FAA63B /* OBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03433041AA4130800FAA63B /* OBlock.m */; };
+		D03433071AA4131C00FAA63B /* SBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03433061AA4131C00FAA63B /* SBlock.m */; };
+		D03433091AA4132500FAA63B /* TBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D03433081AA4132500FAA63B /* TBlock.m */; };
+		D034330B1AA4132E00FAA63B /* ZBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D034330A1AA4132E00FAA63B /* ZBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +47,20 @@
 		D03432E31AA4077000FAA63B /* GhettrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhettrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03432E81AA4077000FAA63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03432E91AA4077000FAA63B /* GhettrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhettrisTests.m; sourceTree = "<group>"; };
-		D03432F41AA4089A00FAA63B /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
-		D03432F51AA408A800FAA63B /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		D03432F71AA4127B00FAA63B /* IBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IBlock.h; path = ../IBlock.h; sourceTree = "<group>"; };
+		D03432F81AA4128F00FAA63B /* JBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBlock.h; sourceTree = "<group>"; };
+		D03432F91AA412A000FAA63B /* LBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LBlock.h; sourceTree = "<group>"; };
+		D03432FA1AA412AF00FAA63B /* OBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OBlock.h; sourceTree = "<group>"; };
+		D03432FB1AA412B900FAA63B /* SBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBlock.h; sourceTree = "<group>"; };
+		D03432FC1AA412C900FAA63B /* TBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBlock.h; sourceTree = "<group>"; };
+		D03432FD1AA412D100FAA63B /* ZBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBlock.h; sourceTree = "<group>"; };
+		D03432FE1AA412E200FAA63B /* IBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBlock.m; sourceTree = "<group>"; };
+		D03433001AA412EB00FAA63B /* JBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBlock.m; sourceTree = "<group>"; };
+		D03433021AA412F400FAA63B /* LBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBlock.m; sourceTree = "<group>"; };
+		D03433041AA4130800FAA63B /* OBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBlock.m; sourceTree = "<group>"; };
+		D03433061AA4131C00FAA63B /* SBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBlock.m; sourceTree = "<group>"; };
+		D03433081AA4132500FAA63B /* TBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBlock.m; sourceTree = "<group>"; };
+		D034330A1AA4132E00FAA63B /* ZBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +106,24 @@
 				D03432D21AA4077000FAA63B /* AppDelegate.m */,
 				D03432D41AA4077000FAA63B /* ViewController.h */,
 				D03432D51AA4077000FAA63B /* ViewController.m */,
+				D03432F71AA4127B00FAA63B /* IBlock.h */,
+				D03432FE1AA412E200FAA63B /* IBlock.m */,
+				D03432F81AA4128F00FAA63B /* JBlock.h */,
+				D03433001AA412EB00FAA63B /* JBlock.m */,
+				D03432F91AA412A000FAA63B /* LBlock.h */,
+				D03433021AA412F400FAA63B /* LBlock.m */,
+				D03432FA1AA412AF00FAA63B /* OBlock.h */,
+				D03433041AA4130800FAA63B /* OBlock.m */,
+				D03432FB1AA412B900FAA63B /* SBlock.h */,
+				D03433061AA4131C00FAA63B /* SBlock.m */,
+				D03432FC1AA412C900FAA63B /* TBlock.h */,
+				D03433081AA4132500FAA63B /* TBlock.m */,
+				D03432FD1AA412D100FAA63B /* ZBlock.h */,
+				D034330A1AA4132E00FAA63B /* ZBlock.m */,
 				D03432D71AA4077000FAA63B /* Main.storyboard */,
 				D03432DA1AA4077000FAA63B /* Images.xcassets */,
 				D03432DC1AA4077000FAA63B /* LaunchScreen.xib */,
 				D03432CD1AA4077000FAA63B /* Supporting Files */,
-				D03432F41AA4089A00FAA63B /* Block.h */,
-				D03432F51AA408A800FAA63B /* Block.m */,
 			);
 			path = Ghettris;
 			sourceTree = "<group>";
@@ -224,10 +254,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03433031AA412F400FAA63B /* LBlock.m in Sources */,
+				D03433071AA4131C00FAA63B /* SBlock.m in Sources */,
 				D03432D61AA4077000FAA63B /* ViewController.m in Sources */,
-				D03432F61AA408A800FAA63B /* Block.m in Sources */,
+				D03433011AA412EB00FAA63B /* JBlock.m in Sources */,
+				D03433051AA4130800FAA63B /* OBlock.m in Sources */,
 				D03432D31AA4077000FAA63B /* AppDelegate.m in Sources */,
+				D034330B1AA4132E00FAA63B /* ZBlock.m in Sources */,
+				D03433091AA4132500FAA63B /* TBlock.m in Sources */,
 				D03432D01AA4077000FAA63B /* main.m in Sources */,
+				D03432FF1AA412E200FAA63B /* IBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
