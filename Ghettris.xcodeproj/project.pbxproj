@@ -14,6 +14,7 @@
 		D03432DB1AA4077000FAA63B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D03432DA1AA4077000FAA63B /* Images.xcassets */; };
 		D03432DE1AA4077000FAA63B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03432DC1AA4077000FAA63B /* LaunchScreen.xib */; };
 		D03432EA1AA4077000FAA63B /* GhettrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D03432E91AA4077000FAA63B /* GhettrisTests.m */; };
+		D03432F61AA408A800FAA63B /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D03432F51AA408A800FAA63B /* Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D03432E31AA4077000FAA63B /* GhettrisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhettrisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D03432E81AA4077000FAA63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D03432E91AA4077000FAA63B /* GhettrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhettrisTests.m; sourceTree = "<group>"; };
+		D03432F41AA4089A00FAA63B /* Block.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		D03432F51AA408A800FAA63B /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				D03432DA1AA4077000FAA63B /* Images.xcassets */,
 				D03432DC1AA4077000FAA63B /* LaunchScreen.xib */,
 				D03432CD1AA4077000FAA63B /* Supporting Files */,
+				D03432F41AA4089A00FAA63B /* Block.h */,
+				D03432F51AA408A800FAA63B /* Block.m */,
 			);
 			path = Ghettris;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D03432D61AA4077000FAA63B /* ViewController.m in Sources */,
+				D03432F61AA408A800FAA63B /* Block.m in Sources */,
 				D03432D31AA4077000FAA63B /* AppDelegate.m in Sources */,
 				D03432D01AA4077000FAA63B /* main.m in Sources */,
 			);
