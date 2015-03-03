@@ -21,46 +21,76 @@
                                 <state key="normal" title="I">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="22a-UU-iB1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1de-BZ-glv">
                                 <rect key="frame" x="64" y="540" width="40" height="40"/>
                                 <state key="normal" title="J">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5R-AM-fwt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0h-Sf-YYS">
                                 <rect key="frame" x="112" y="540" width="40" height="40"/>
                                 <state key="normal" title="L">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3K-fT-pTc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R2K-AT-Uwv">
                                 <rect key="frame" x="160" y="540" width="40" height="40"/>
                                 <state key="normal" title="O">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNg-zy-9Ui"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zG-vS-C4P">
                                 <rect key="frame" x="208" y="540" width="40" height="40"/>
                                 <state key="normal" title="S">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wez-tp-2I6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVq-QY-j8B">
                                 <rect key="frame" x="256" y="540" width="40" height="40"/>
                                 <state key="normal" title="T">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ibN-Xb-TZh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4p-E4-9IT">
                                 <rect key="frame" x="304" y="540" width="40" height="40"/>
                                 <state key="normal" title="Z">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapShape:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3oV-hg-tOo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="iButton" destination="94h-jr-TwO" id="Yge-3b-nYR"/>
+                        <outlet property="jButton" destination="1de-BZ-glv" id="pqe-Ld-fDM"/>
+                        <outlet property="lButton" destination="e0h-Sf-YYS" id="2Nq-ln-yie"/>
+                        <outlet property="oButton" destination="R2K-AT-Uwv" id="tY5-ht-EZa"/>
+                        <outlet property="sButton" destination="9zG-vS-C4P" id="0iS-sB-VdO"/>
+                        <outlet property="tButton" destination="dVq-QY-j8B" id="UZC-Ba-QC1"/>
+                        <outlet property="zButton" destination="b4p-E4-9IT" id="jS0-MM-0BQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
