@@ -16,6 +16,8 @@
 
 @implementation Block
 
+//Overrides initWithFrame to take a blocktype as well
+//This is needed for drawRect
 -(id)initWithFrame:(CGRect)frame blockType:(NSString*)block
 {
     
@@ -55,7 +57,8 @@
     CGSize size = CGSizeMake(rect.size.width/4, rect.size.height/4);
     CGPoint origin=rect.origin;
     
-    
+    //Each one of these uses the code to draw a single block four times
+    //with positions dependant on the type of block to be drawn.
     if([self.blockType isEqual:@"I"])
     {
         CGPoint firstBlock=CGPointMake(origin.x, origin.y+size.height*3);
@@ -139,6 +142,10 @@
         NSLog(@"Blocktype not set");
 }
 
+//This function was modified to take an origin and size from the above function.
+//I also had to modify how each point was assigned, in that I increase the y value rather
+//than decrease it as before. This is due to the nature of how I positioned origin of each
+//block within the entire frame.
 -(void) drawSingleBlock:(CGSize)blockSize :(CGPoint)blockOrigin :(UIColor*)blockColor
 {
     UIBezierPath *path = [[UIBezierPath alloc] init];

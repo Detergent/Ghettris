@@ -31,6 +31,7 @@
 @property(nonatomic) UISwipeGestureRecognizer *leftSwipe;
 @property(nonatomic) UITapGestureRecognizer *tapGesture;
 @property BOOL inMotion;
+@property BOOL dropMotion;
 
 @end
 
@@ -80,6 +81,7 @@ const NSInteger widthOfBoardInBlocks = 10;
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.view addGestureRecognizer:self.tapGesture];
     self.inMotion = NO;
+    self.dropMotion = NO;
     
 }
 
@@ -160,9 +162,10 @@ const NSInteger widthOfBoardInBlocks = 10;
 
 -(void) handleTap: (UITapGestureRecognizer *) sender
 {
-    if( self.inMotion) {
+    if( self.inMotion || self.dropMotion) {
         return;
     }
+    self.dropMotion = YES;
     self.block.center=blockInitCenter;
     CGPoint center = self.block.center;
     CGPoint newCenter = CGPointMake(center.x, center.y + 315); //the 315 static value may need to change height*9
@@ -172,6 +175,7 @@ const NSInteger widthOfBoardInBlocks = 10;
                          self.block.center = newCenter;
                      } completion:^(BOOL finished) {
                          NSLog(@"Animation complete with status: %@", @(finished));
+                         self.dropMotion = NO;
                          [self.view removeGestureRecognizer:self.rightSwipe];
                          [self.view removeGestureRecognizer:self.tapGesture];
                          [self.view removeGestureRecognizer:self.leftSwipe];
@@ -180,35 +184,40 @@ const NSInteger widthOfBoardInBlocks = 10;
 
 - (IBAction)didTapShape:(id)sender
 {
-    if(sender==self.iButton)
-        self.blockType=@"I";
-    else if(sender==self.jButton)
-        self.blockType=@"J";
-    else if(sender==self.lButton)
-        self.blockType=@"L";
-    else if(sender==self.oButton)
-        self.blockType=@"O";
-    else if(sender==self.sButton)
-        self.blockType=@"S";
-    else if(sender==self.tButton)
-        self.blockType=@"T";
-    else if(sender==self.zButton)
-        self.blockType=@"Z";
-    
-    //There has to be a cleaner way to do this...
-    NSLog(@"%@", self.blockType);
-    [self.tetriminoView removeFromSuperview];
-    self.tetriminoView=nil;
-    self.block=nil;
-    self.block = [[Block alloc] initWithFrame:self->blockFrame blockType:self.blockType];
-    [self.block setBackgroundColor:[UIColor clearColor]];
-    self.tetriminoView = [[UIView alloc] initWithFrame:self.block.frame];
-    [self.tetriminoView addSubview:self.block];
-    [self.view addSubview:self.tetriminoView];
-    //These were needed onces I implemented drop animations
-    [self.view addGestureRecognizer:self.leftSwipe];
-    [self.view addGestureRecognizer:self.rightSwipe];
-    [self.view addGestureRecognizer:self.tapGesture];
+    //I chose to not create blocks while they are animating as the
+    //completion animation in tapHandler removes the view for them after
+    //the function would have been done dropping the block anyway
+    if(!self.inMotion && !self.dropMotion){
+        if(sender==self.iButton)
+            self.blockType=@"I";
+        else if(sender==self.jButton)
+            self.blockType=@"J";
+        else if(sender==self.lButton)
+            self.blockType=@"L";
+        else if(sender==self.oButton)
+            self.blockType=@"O";
+        else if(sender==self.sButton)
+            self.blockType=@"S";
+        else if(sender==self.tButton)
+            self.blockType=@"T";
+        else if(sender==self.zButton)
+            self.blockType=@"Z";
+        
+        //There has to be a cleaner way to do this...
+        NSLog(@"%@", self.blockType);
+        [self.tetriminoView removeFromSuperview];
+        self.tetriminoView=nil;
+        self.block=nil;
+        self.block = [[Block alloc] initWithFrame:self->blockFrame blockType:self.blockType];
+        [self.block setBackgroundColor:[UIColor clearColor]];
+        self.tetriminoView = [[UIView alloc] initWithFrame:self.block.frame];
+        [self.tetriminoView addSubview:self.block];
+        [self.view addSubview:self.tetriminoView];
+        //These were needed onces I implemented drop animations
+        [self.view addGestureRecognizer:self.leftSwipe];
+        [self.view addGestureRecognizer:self.rightSwipe];
+        [self.view addGestureRecognizer:self.tapGesture];
+    }
 }
 
 
